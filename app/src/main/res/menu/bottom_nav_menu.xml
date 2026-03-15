@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_books"
+        android:icon="@drawable/books"
+        android:title="Книги"/>
+
+    <item
+        android:id="@+id/nav_readers"
+        android:icon="@drawable/readers"
+        android:title="Читатели"/>
+
+    <item
+        android:id="@+id/nav_loans"
+        android:icon="@drawable/loans"
+        android:title="Выдачи"/>
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile"
+        android:title="Профиль"/>
+</menu>

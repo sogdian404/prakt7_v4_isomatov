@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 🎨 Основная палитра библиотеки -->
+    <color name="library_primary">#5D4037</color>      <!-- Тёмное дерево -->
+    <color name="library_primary_dark">#3E2723</color>  <!-- Глубокий коричневый -->
+    <color name="library_accent">#D4AF37</color>        <!-- Золото (акценты) -->
+    <color name="library_background">#FDF5E6</color>    <!-- Цвет старой бумаги -->
+    <color name="library_surface">#FFFFFF</color>       <!-- Белый для карточек -->
+    <color name="library_text">#2E1B1B</color>          <!-- Тёмный текст -->
+    <color name="library_text_secondary">#5D4037</color> <!-- Вторичный текст -->
+
+    <!-- 📚 Статусы -->
+    <color name="status_available">#2E7D32</color>      <!-- Зелёный: доступна -->
+    <color name="status_issued">#EF6C00</color>         <!-- Оранжевый: выдана -->
+    <color name="status_overdue">#C62828</color>        <!-- Красный: просрочена -->
+    <color name="status_blocked">#424242</color>        <!-- Серый: заблокирован -->
+
+    <!-- 🎯 Стандартные (для совместимости) -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#F44336</color>
+    <color name="green">#4CAF50</color>
+</resources>
