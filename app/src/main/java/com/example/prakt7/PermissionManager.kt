@@ -6,9 +6,9 @@ import android.content.Context
 object PermissionManager {
 
     // Роли
-    const val ROLE_STUDENT = "student"
-    const val ROLE_TEACHER = "teacher"
-    const val ROLE_LIBRARIAN = "librarian"
+    const val ROLE_STUDENT = "Студент"
+    const val ROLE_TEACHER = "Преподаватель"
+    const val ROLE_LIBRARIAN = "Библиотекарь"
 
     // Получаем текущую роль пользователя
     fun getUserRole(context: Context): String {

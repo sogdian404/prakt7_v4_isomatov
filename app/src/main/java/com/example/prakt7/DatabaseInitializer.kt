@@ -50,7 +50,7 @@ object DatabaseInitializer {
                         title = "1984",
                         author_id = author1Id,  // ✅ Используем реальный ID из базы
                         authorName = "Джордж Оруэлл",
-                        section = "Fiction",
+                        section = "Вымисел",
                         coverImageUrl = "https://covers.openlibrary.org/b/id/8225261-L.jpg",
                         isElectronic = false,
                         year = 1949
@@ -61,7 +61,7 @@ object DatabaseInitializer {
                         title = "Мастер и Маргарита",
                         author_id = author2Id,
                         authorName = "М. Булгаков",
-                        section = "Classic",
+                        section = "Классика",
                         coverImageUrl = "https://covers.openlibrary.org/b/id/10209943-L.jpg",
                         isElectronic = false,
                         year = 1967

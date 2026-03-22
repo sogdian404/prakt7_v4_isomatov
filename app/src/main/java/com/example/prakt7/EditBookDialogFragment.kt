@@ -25,7 +25,7 @@ class EditBookDialogFragment(
     private lateinit var spinnerSection: Spinner
     private lateinit var switchElectronic: Switch
 
-    private val sections = listOf("Fiction", "Classic", "IT", "Science", "History", "Fantasy", "Other")
+    private val sections = listOf("Вымисел", "Классика", "IT", "Наука", "История", "Фантастика", "Другое")
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         database = LibraryDatabase.getDatabase(requireContext())

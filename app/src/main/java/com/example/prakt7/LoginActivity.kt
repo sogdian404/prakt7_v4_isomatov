@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var sharedPreferences: SharedPreferences
 
     // Роли пользователей
-    private val roles = listOf("student", "teacher", "librarian")
+    private val roles = listOf("Студент", "Преподаватель", "Библиотекарь")
     private val roleNames = listOf("🎓 Студент", "👨‍🏫 Преподаватель", "📚 Библиотекарь")
 
     override fun onCreate(savedInstanceState: Bundle?) {

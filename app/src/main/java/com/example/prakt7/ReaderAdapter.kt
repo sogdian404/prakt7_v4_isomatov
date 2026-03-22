@@ -24,9 +24,9 @@ class ReaderAdapter(
             tvName.text = reader.fullName
             tvEmail.text = reader.email
             tvRole.text = when (reader.role) {
-                "student" -> "🎓 Студент"
-                "teacher" -> "👨‍🏫 Преподаватель"
-                "librarian" -> "📚 Библиотекарь"
+                "Студент" -> "🎓 Студент"
+                "Преподаватель" -> "👨‍🏫 Преподаватель"
+                "Библиотекарь" -> "📚 Библиотекарь"
                 else -> "👤 Пользователь"
             }
 

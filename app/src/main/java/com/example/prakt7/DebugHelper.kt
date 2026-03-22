@@ -37,7 +37,7 @@ object DebugHelper {
                         title = "Преступление и наказание",
                         author_id = author,
                         authorName = "Ф. Достоевский",
-                        section = "Classic",
+                        section = "Классика",
                         coverImageUrl = "https://covers.openlibrary.org/b/id/8739103-L.jpg",
                         isElectronic = false
                     ))
@@ -51,7 +51,7 @@ object DebugHelper {
                         fullName = "Иванов Иван",
                         email = "ivanov@test.ru",
                         password = "123456",
-                        role = "student",
+                        role = "Студент",
                         isBlocked = false
                     )
                     readerDao.insert(readerFine)
@@ -91,7 +91,7 @@ object DebugHelper {
                         title = "Война и мир",
                         author_id = author2,
                         authorName = "Л. Толстой",
-                        section = "Classic",
+                        section = "Классика",
                         coverImageUrl = "https://covers.openlibrary.org/b/id/10898847-L.jpg",
                         isElectronic = false
                     ))
@@ -105,7 +105,7 @@ object DebugHelper {
                         fullName = "Петров Петр",
                         email = "petrov@test.ru",
                         password = "123456",
-                        role = "student",
+                        role = "Студент",
                         isBlocked = false  // Заблокируем после создания выдачи
                     )
                     readerDao.insert(readerBlocked)

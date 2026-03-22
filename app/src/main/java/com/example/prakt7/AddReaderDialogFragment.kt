@@ -21,7 +21,7 @@ class AddReaderDialogFragment : DialogFragment() {
     private lateinit var etPassword: EditText
     private lateinit var spinnerRole: Spinner
 
-    private val roles = listOf("student", "teacher", "librarian")
+    private val roles = listOf("Студент", "Преподаватель", "Библиотекарь")
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         database = LibraryDatabase.getDatabase(requireContext())
