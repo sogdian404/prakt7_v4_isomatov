@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
+        // ✅ ОГРАНИЧИВАЕМ МЕНЮ ПО РОЛИ
+        setupNavigationByRole()
         // Обработчик переключения вкладок
         bottomNavigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
@@ -50,7 +52,38 @@ class MainActivity : AppCompatActivity() {
             bottomNavigationView.selectedItemId = R.id.nav_books
         }
     }
+    private fun setupNavigationByRole() {
+        val menu = bottomNavigationView.menu
 
+        if (PermissionManager.isLibrarian(this)) {
+            // 📚 Библиотекарь: видит ВСЕ вкладки (4)
+            menu.findItem(R.id.nav_books)?.isVisible = true
+            menu.findItem(R.id.nav_readers)?.isVisible = true
+            menu.findItem(R.id.nav_loans)?.isVisible = true
+            menu.findItem(R.id.nav_profile)?.isVisible = true
+
+            // Меняем заголовок
+            supportActionBar?.title = "📚 Библиотека — Библиотекарь"
+
+        } else if (PermissionManager.isTeacher(this)) {
+            // 👨‍ Преподаватель: видит Книги, Выдачи, Профиль (3)
+            menu.findItem(R.id.nav_books)?.isVisible = true
+            menu.findItem(R.id.nav_readers)?.isVisible = false  // Скрываем читателей
+            menu.findItem(R.id.nav_loans)?.isVisible = true     // Может смотреть выдачи
+            menu.findItem(R.id.nav_profile)?.isVisible = true
+
+            supportActionBar?.title = "📚 Библиотека — Преподаватель"
+
+        } else {
+            // 🎓 Студент: видит только Книги и Профиль (2)
+            menu.findItem(R.id.nav_books)?.isVisible = true
+            menu.findItem(R.id.nav_readers)?.isVisible = false  // Скрываем читателей
+            menu.findItem(R.id.nav_loans)?.isVisible = true    // Скрываем выдачи
+            menu.findItem(R.id.nav_profile)?.isVisible = true
+
+            supportActionBar?.title = "📚 Библиотека — Студент"
+        }
+    }
     private fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)

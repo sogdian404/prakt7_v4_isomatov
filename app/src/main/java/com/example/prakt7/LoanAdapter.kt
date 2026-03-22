@@ -11,7 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 class LoanAdapter(
     private var loans: List<Loan> = emptyList(),
     private val onReturnClick: (Loan) -> Unit,
-    private val onItemClick: (Loan) -> Unit
+    private val onItemClick: (Loan) -> Unit,
+    private val isLibrarian: Boolean
 ) : RecyclerView.Adapter<LoanAdapter.LoanViewHolder>() {
 
     inner class LoanViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -38,7 +39,13 @@ class LoanAdapter(
             )
 
             itemView.setOnClickListener { onItemClick(loan) }
-            btnReturn.setOnClickListener { onReturnClick(loan) }
+
+            if (isLibrarian) {
+                btnReturn.visibility = View.VISIBLE
+                btnReturn.setOnClickListener { onReturnClick(loan) }
+            } else {
+                btnReturn.visibility = View.GONE
+            }
         }
     }
 

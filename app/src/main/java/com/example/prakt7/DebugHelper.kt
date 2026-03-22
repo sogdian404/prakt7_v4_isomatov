@@ -48,7 +48,7 @@ object DebugHelper {
                 var readerFine = readerDao.getReaderByEmail("ivanov@test.ru")
                 if (readerFine == null) {
                     readerFine = Reader(
-                        fullName = "Иванов Иван (штраф)",
+                        fullName = "Иванов Иван",
                         email = "ivanov@test.ru",
                         password = "123456",
                         role = "student",
@@ -102,7 +102,7 @@ object DebugHelper {
                 var readerBlocked = readerDao.getReaderByEmail("petrov@test.ru")
                 if (readerBlocked == null) {
                     readerBlocked = Reader(
-                        fullName = "Петров Петр (заблокирован)",
+                        fullName = "Петров Петр",
                         email = "petrov@test.ru",
                         password = "123456",
                         role = "student",

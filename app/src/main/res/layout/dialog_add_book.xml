@@ -36,7 +36,6 @@
                 android:id="@+id/btnSearchCover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="🔍"
                 android:layout_marginStart="8dp"
                 app:icon="@android:drawable/ic_menu_search"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
@@ -75,7 +74,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="URL обложки (автозаполняется)"
+            android:hint="URL обложки (необязательно)"
             android:layout_marginBottom="16dp">
 
             <com.google.android.material.textfield.TextInputEditText

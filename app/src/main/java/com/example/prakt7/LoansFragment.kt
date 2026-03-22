@@ -25,6 +25,8 @@ class LoansFragment : Fragment(R.layout.fragment_loans) {
 
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        val isLibrarian = PermissionManager.isLibrarian(requireContext())
+
         adapter = LoanAdapter(
             emptyList(),
             onReturnClick = { loan ->
@@ -42,11 +44,11 @@ class LoansFragment : Fragment(R.layout.fragment_loans) {
                         Выдана: ${android.text.format.DateFormat.format("dd.MM.yyyy", loan.issueDate)}
                         Вернуть до: ${android.text.format.DateFormat.format("dd.MM.yyyy", loan.dueDate)}
                         Статус: ${loan.getStatus()}
-                        Штраф: ${loan.fineAmount} руб.
                     """.trimIndent())
                     .setPositiveButton("OK", null)
                     .show()
-            }
+            },
+            isLibrarian = isLibrarian
         )
         recyclerView.adapter = adapter
 
